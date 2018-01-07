@@ -1,0 +1,512 @@
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+#gg <- gg + scale_fill_discrete()
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_discrete(h =c(220,260))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_discrete(h =c(200,260))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_discrete(h =c(20,260))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_discrete(h =c(100,260))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_brewer('Set1')
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- gg + scale_fill_brewer('Spectral')
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_brewer('Spectral')
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_brewer('Paired')
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+gg <- gg + scale_fill_brewer('Paired')
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = getPalette(colourCount))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(colourCount))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+library(scales)
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(colourCount))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+library('ggthemes')
+install.packages('ggthemes')
+library('ggthemes')
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(colourCount))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+library('RColorBrewer')
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(colourCount))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- gg + scale_fill_manual(values = getPalette(colourCount))
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = getPalette(colourCount))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = getPalette(20))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(20))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(16))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(16))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.local),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(16))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.local),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(19))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(19))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+top_industry_subsidy <- dta2000 %>%
+#  filter(HQ.Country.of.Parent != "USA") %>%
+group_by(state, Major.Industry.of.Parent)%>%
+summarise(subsidy = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy))
+top_industry_subsidy_F <- dta2000 %>%
+#  filter(HQ.Country.of.Parent != "USA") %>%
+group_by(State.in.Which.Facility.Is.Located, Major.Industry.of.Parent)%>%
+summarise(subsidy.federal = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy.federal))
+top_industry_subsidy_L <- dta2000 %>%
+#  filter(HQ.Country.of.Parent != "USA") %>%
+group_by(Location, Major.Industry.of.Parent)%>%
+summarise(subsidy.local = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy.local))
+#### combine to summary table ####
+industry <- left_join(top_industry_subsidy_F, top_industry_subsidy_L,
+by = c('State.in.Which.Facility.Is.Located' = "Location"))
+summary <- right_join(industry, foreign_share,
+by = c('State.in.Which.Facility.Is.Located' = "Location"))
+names(summary) <- c("State", "Industry.federal","Subsidy.federal",
+"Industry.local","Subsidy.local","Subsidy.domestic","Subsidy.foreign",
+"Subsidy.mega.domestic","Subsidy.mega.foreign",
+"foreign.share", "mega.foreign.share")
+write.csv(summary,"summary.csv")
+data <- read.csv('summary.csv')
+data$state <- tolower(data$State)
+test <- left_join(us, data, by = c("region" = "state"))
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(19))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.local),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(11))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.local),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(18))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(18))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.federal),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(11))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+View(top_industry_subsidy)
+top_industry_subsidy <- dta2000 %>%
+filter(HQ.Country.of.Parent != "USA") %>%
+group_by(state, Major.Industry.of.Parent)%>%
+summarise(subsidy = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy))
+View(top_industry_subsidy)
+top_industry_subsidy_USA <- dta2000 %>%
+filter(HQ.Country.of.Parent = "USA") %>%
+group_by(state, Major.Industry.of.Parent)%>%
+summarise(subsidy.USA = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy.USA))
+top_industry_subsidy_foreign <- dta2000 %>%
+filter(HQ.Country.of.Parent != "USA") %>%
+group_by(state, Major.Industry.of.Parent)%>%
+summarise(subsidy.foreign = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy.foreign))
+top_industry_subsidy_USA <- dta2000 %>%
+filter(HQ.Country.of.Parent == "USA") %>%
+group_by(state, Major.Industry.of.Parent)%>%
+summarise(subsidy.USA = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
+slice(which.max(subsidy.USA))
+View(top_industry_subsidy_USA)
+View(top_industry_subsidy_foreign)
+View(industry)
+names(summary) <- c("state", "Industry.federal","Subsidy.federal",
+"Industry.local","Subsidy.local","Subsidy.domestic","Subsidy.foreign",
+"Subsidy.mega.domestic","Subsidy.mega.foreign",
+"foreign.share", "mega.foreign.share")
+industry_compare <- left_join(top_industry_subsidy_USA, top_industry_subsidy_USA, by = "state" )
+summary <- left_join(summary, industry_compare,
+by = c("Location" = "state"))
+summary <- right_join(industry, foreign_share,
+by = c('State.in.Which.Facility.Is.Located' = "Location"))
+summary <- left_join(summary, industry_compare,
+by = c("Location" = "state"))
+summary <- left_join(summary, industry_compare,
+by = c("Location" = "State.in.Which.Facility.Is.Located"))
+summary <- left_join(summary, industry_compare,
+by = c("State.in.Which.Facility.Is.Located" = "state"))
+names(summary) <- c("State", "Industry.federal","Subsidy.federal",
+"Industry.local","Subsidy.local","Subsidy.domestic","Subsidy.foreign",
+"Subsidy.mega.domestic","Subsidy.mega.foreign",
+"foreign.share", "mega.foreign.share",
+"Industry.USA", "Subsidy.USA","Industry.foreign", "Subsidy.frg")
+View(summary)
+write.csv(summary,"summary.csv")
+data <- read.csv('summary.csv')
+data$state <- tolower(data$State)
+test <- left_join(us, data, by = c("region" = "state"))
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.USA),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(11))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.USA),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(13))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.foreign),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(13))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+industry_compare <- left_join(top_industry_subsidy_USA, top_industry_subsidy_foreign, by = "state" )
+summary <- right_join(industry, foreign_share,
+by = c('State.in.Which.Facility.Is.Located' = "Location"))
+summary <- left_join(summary, industry_compare,
+by = c("State.in.Which.Facility.Is.Located" = "state"))
+names(summary) <- c("State", "Industry.federal","Subsidy.federal",
+"Industry.local","Subsidy.local","Subsidy.domestic","Subsidy.foreign",
+"Subsidy.mega.domestic","Subsidy.mega.foreign",
+"foreign.share", "mega.foreign.share",
+"Industry.USA", "Subsidy.USA","Industry.foreign", "Subsidy.frg")
+write.csv(summary,"summary.csv")
+us <- map_data("state")
+data <- read.csv('summary.csv')
+data$state <- tolower(data$State)
+test <- left_join(us, data, by = c("region" = "state"))
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.foreign),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(13))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
+gg <- ggplot()
+gg <- gg + geom_map(data=test, map=test,
+aes(x=long, y=lat, map_id=region, fill = Industry.foreign),
+color="#ffffff", size=0.15)
+#gg <- gg + scale_fill_continuous(low='#deebf7', high='#08306b', guide='colorbar')
+gg <- gg + scale_fill_manual(values = colorRampPalette(brewer.pal(8, "Set1"))(17))
+gg <- gg + labs(x=NULL, y=NULL)
+gg <- gg + coord_map("albers", lat0 = 39, lat1 = 45)
+gg <- gg + theme(panel.border = element_blank())
+gg <- gg + theme(panel.background = element_blank())
+gg <- gg + theme(axis.ticks = element_blank())
+gg <- gg + theme(axis.text = element_blank())
+gg
