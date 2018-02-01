@@ -19,16 +19,16 @@ summary(dta$Year.range)
 
 # DATA SLICE --------------------------------------------------------------
 dta.main <- dta %>%
-    select (Year, Year.range,Company, Parent.Company, Location,
-            Subsidy.Value, Megadeal.Contribution, Subsidy.Value.Adjusted.For.Megadeal,Loan.Value, 
-            Type.of.Subsidy,Subsidy.Source,State.in.Which.Facility.Is.Located,
-            HQ.State.of.Parent, HQ.Country.of.Parent,Major.Industry.of.Parent)
+  select (Year, Year.range,Company, Parent.Company, Location,
+          Subsidy.Value, Megadeal.Contribution, Subsidy.Value.Adjusted.For.Megadeal,Loan.Value, 
+          Type.of.Subsidy,Subsidy.Source,State.in.Which.Facility.Is.Located,
+          HQ.State.of.Parent, HQ.Country.of.Parent,Major.Industry.of.Parent)
 
 # standardize value coding ###############################################
 
 # text value to lower
 dta.main[,c("Type.of.Subsidy","Subsidy.Source")] <- lapply(dta.main[,c("Type.of.Subsidy","Subsidy.Source")],
-                                                          function(x)factor(tolower(x)))
+                                                           function(x)factor(tolower(x)))
 summary(dta.main$Type.of.Subsidy)
 
 # dollar value, convert from factor to number
@@ -87,6 +87,11 @@ names(foreign_share) <- c("Year.range", "State", "Total.subsidy_USA", "Total.sub
 
 write.csv(foreign_share,"foreign_share.csv")
 
+foreign_share_sum <- foreign_share %>% group_by(Year.range) %>%
+  summarise_if(is.numeric, sum, na.rm = TRUE)
+
+write.csv(foreign_share_sum,"foreign_share_sum.csv")
+
 # industry ================================================================
 
 top_industry_subsidy_USA <- dta.main %>%
@@ -102,13 +107,13 @@ top_industry_subsidy_foreign <- dta.main %>%
   slice(which.max(subsidy.foreign))
 
 top_industry_subsidy_F <- dta.main %>%
-#  filter(HQ.Country.of.Parent != "USA") %>%
+  #  filter(HQ.Country.of.Parent != "USA") %>%
   group_by(State.in.Which.Facility.Is.Located, Major.Industry.of.Parent)%>%
   summarise(subsidy.federal = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
   slice(which.max(subsidy.federal))
 
 top_industry_subsidy_L <- dta.main %>%
-#  filter(HQ.Country.of.Parent != "USA") %>%
+  #  filter(HQ.Country.of.Parent != "USA") %>%
   group_by(Location, Major.Industry.of.Parent)%>%
   summarise(subsidy.local = sum(Subsidy.Value.Adjusted.For.Megadeal, na.rm = TRUE))%>%
   slice(which.max(subsidy.local))
@@ -123,11 +128,11 @@ industry <- left_join(top_industry_subsidy_F, top_industry_subsidy_L,
 industry_compare <- left_join(top_industry_subsidy_USA, top_industry_subsidy_foreign, by = "state" )
 
 summary <- right_join(industry, foreign_share,
-                     by = c('State.in.Which.Facility.Is.Located' = "Location"))
+                      by = c('State.in.Which.Facility.Is.Located' = "Location"))
 
 summary <- left_join(summary, industry_compare, 
                      by = c("State.in.Which.Facility.Is.Located" = "state"))
-  
+
 names(summary) <- c("State", "Industry.federal","Subsidy.federal",
                     "Industry.local","Subsidy.local","Subsidy.domestic","Subsidy.foreign",
                     "Subsidy.mega.domestic","Subsidy.mega.foreign",
