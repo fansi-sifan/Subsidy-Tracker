@@ -3,7 +3,7 @@
 
 # SET UP ------------------------------------------------------------------
 library('dplyr')
-#dta <- read.csv("master.csv")
+dta <- read.csv("master.csv")
 factor2num <- function(x)as.numeric(gsub(",", "", gsub("[$]", "", x)))
 
 # create year group =====================================================

@@ -9,6 +9,7 @@ library('ggplot2')
 library('scales')
 library('ggthemes')
 library('RColorBrewer')
+library('plotly')
 
 us <- map_data("state")
 data <- read.csv('summary.csv')
@@ -53,6 +54,18 @@ state_color_c <- function(data, var, title){
   return(gg)
   
 }
+
+
+geom_map(data = test, map = test,
+         aes(x = long, y = lat, map_id = region, fill = var),
+         color = "#ffffff", size = 0.15) + 
+  scale_fill_continuous(name = var,low='#deebf7', high='#08306b', guide='colorbar') + 
+  labs(x=NULL, y=NULL, title = title) + 
+  coord_map("albers", lat0 = 39, lat1 = 45) + 
+  theme(panel.border = element_blank()) + 
+  theme(panel.background = element_blank()) + 
+  theme(axis.ticks = element_blank()) + 
+  theme(axis.text = element_blank())
 
 # map variables #############
 state_color_c(test, "foreign.share", "Share of subsidies to foreign companies by state")
