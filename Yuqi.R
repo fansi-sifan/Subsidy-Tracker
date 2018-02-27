@@ -96,8 +96,8 @@ table3$Federal_nonFederal <- factor(table3$Federal_nonFederal, levels = c("Subsi
 #without the US
 ggplot(data = table3, aes(x = reorder(HQ.Country.of.Parent,table3$Subsidy_adjust),
                           y = Federal_nonFederal_Subsidy,
-                        fill = Federal_nonFederal,
-                        text = Subsidy_adjust)) +
+                          fill = Federal_nonFederal,
+                          text = Subsidy_adjust)) +
   #scale_y_continuous(breaks=c(-20,0,20,40,60,80), limits=c(-20,80)) +
   #geom_hline(yintercept = 0, color = c("#646464")) +
   geom_bar(stat = "identity") +
@@ -123,6 +123,8 @@ ggplot(data = table3, aes(x = reorder(HQ.Country.of.Parent,table3$Subsidy_adjust
 # 
 # ggplot(data = filter(table1, HQ.Country.of.Parent != "USA"), aes(x = HQ.Country.of.Parent, y = Subsidy_adjust)) + 
 #   geom_bar(stat = "identity")
+
+
 
 
 
