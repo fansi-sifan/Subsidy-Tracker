@@ -11,10 +11,9 @@ library('ggthemes')
 library('RColorBrewer')
 library('plotly')
 
-us <- map_data("state")
-data <- read.csv('summary.csv')
-data$state <- tolower(data$State)
-test <- left_join(us, data, by = c("region" = "state"))
+states <- map_data("state")
+subsidy.summary <- read.csv('summary.csv')
+subsidy.summary$ID <- tolower(subsidy.summary$State)
 
 
 # MAP ---------------------------------------------------------------------
@@ -56,11 +55,11 @@ state_color_c <- function(data, var, title){
 }
 
 
-geom_map(data = test, map = test,
-         aes(x = long, y = lat, map_id = region, fill = var),
-         color = "#ffffff", size = 0.15) + 
-  scale_fill_continuous(name = var,low='#deebf7', high='#08306b', guide='colorbar') + 
-  labs(x=NULL, y=NULL, title = title) + 
+ggplot() + 
+  geom_map(data = states, map = states, aes(x = long, y = lat, map_id = region),fill = "white", color = "black") +
+  geom_map(data = subsidy.summary, map = states, aes(fill = foreign.share, map_id = ID)) +
+#  scale_fill_continuous(name = var,low='#deebf7', high='#08306b', guide='colorbar') + 
+  labs(x=NULL, y=NULL) + 
   coord_map("albers", lat0 = 39, lat1 = 45) + 
   theme(panel.border = element_blank()) + 
   theme(panel.background = element_blank()) + 

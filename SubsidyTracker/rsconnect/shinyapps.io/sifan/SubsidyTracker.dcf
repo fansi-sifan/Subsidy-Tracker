@@ -1,0 +1,12 @@
+name: SubsidyTracker
+title: SubsidyTracker
+username:
+account: sifan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 290581
+bundleId: 1245890
+url: https://sifan.shinyapps.io/SubsidyTracker/
+when: 1519858134.51592
+asMultiple: FALSE
+asStatic: FALSE
