@@ -10,9 +10,10 @@ library('scales')
 library('ggthemes')
 library('RColorBrewer')
 library('plotly')
+library(fiftystater)
 
 states <- map_data("state")
-subsidy.summary <- read.csv('summary.csv')
+subsidy.summary <- read.csv('../summary.csv')
 subsidy.summary$ID <- tolower(subsidy.summary$State)
 
 
@@ -54,17 +55,20 @@ state_color_c <- function(data, var, title){
   
 }
 
-
-ggplot() + 
-  geom_map(data = states, map = states, aes(x = long, y = lat, map_id = region),fill = "white", color = "black") +
-  geom_map(data = subsidy.summary, map = states, aes(fill = foreign.share, map_id = ID)) +
+# raw script
+g <- ggplot() + 
+  geom_map(data = states, map = fifty_states, aes(x = long, y = lat, map_id = region),fill = "white", color = "black") +
+  geom_map(data = subsidy.summary, map = fifty_states, aes(fill = foreign.share, map_id = ID)) +
 #  scale_fill_continuous(name = var,low='#deebf7', high='#08306b', guide='colorbar') + 
   labs(x=NULL, y=NULL) + 
   coord_map("albers", lat0 = 39, lat1 = 45) + 
   theme(panel.border = element_blank()) + 
   theme(panel.background = element_blank()) + 
   theme(axis.ticks = element_blank()) + 
-  theme(axis.text = element_blank())
+  theme(axis.text = element_blank())+
+  theme(panel.background = element_blank())
+
+g 
 
 # map variables #############
 state_color_c(test, "foreign.share", "Share of subsidies to foreign companies by state")
