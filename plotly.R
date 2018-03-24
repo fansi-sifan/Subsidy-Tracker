@@ -9,24 +9,19 @@ if(any(!check)){
   check <- sapply(pkgs.missing,require,warn.conflicts = TRUE,character.only = TRUE)
 }
 
-
 # set up ------------------------------------------------------------------
-
-Sys.setenv("plotly_username"="fansi-sifan")
-Sys.setenv("plotly_api_key"="rR48wbDvfdnqC3mLPz2X")
-
-
 load('summary.Rda')
 xwalk <- read.csv("/Users/Fancy/OneDrive - The Brookings Institution/Classes/code/Xwalk/states.csv")
-#xwalk <- read.csv("../R/Xwalk/state2abb.csv")
 
-#data$hover <- with(data, paste(State, '<br>', "Foreign Share:", paste(round(100*foreign.share, 2), "%", sep="")))
 data <- summary %>%
-  filter(foreign ==1 & federal ==0) %>%
+  filter(foreign == 1 & federal == 0) %>%
   left_join(xwalk, by = c("state" = "Name")) 
 
-# give state boundaries a white border
+# plotly -----------------------------------------------------------------
 
+#data$hover <- with(data, paste(State, '<br>', "Foreign Share:", paste(round(100*foreign.share, 2), "%", sep="")))
+
+# give state boundaries a white border
 l <- list(color = toRGB("black"), width = 2)
 # specify some map projection/options
 g <- list(
@@ -35,7 +30,7 @@ g <- list(
   showlakes = TRUE,
   lakecolor = toRGB('white')
 )
-
+# plot
 p <- plot_geo(data, locationmode = 'USA-states') %>%
   add_trace(
     z = ~industry_sum, text = ~Major.Industry.of.Parent, locations = ~State,
@@ -49,7 +44,10 @@ p <- plot_geo(data, locationmode = 'USA-states') %>%
 
 p
 
-# Create a shareable link to your chart
+# Create a shareable link
 # Set up API credentials: https://plot.ly/r/getting-started
+Sys.setenv("plotly_username"="fansi-sifan")
+Sys.setenv("plotly_api_key"="rR48wbDvfdnqC3mLPz2X")
+
 api_create(p, filename = "Top industry by state", sharing = "public")
 
