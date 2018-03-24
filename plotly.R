@@ -1,19 +1,31 @@
+# Author:Sifan Liu
+# Date: Fri Mar 23 20:55:10 2018
+# --------------
+pkgs <- c('dplyr', 'shiny', 'plotly')
+check <- sapply(pkgs,require,warn.conflicts = TRUE,character.only = TRUE)
+if(any(!check)){
+  pkgs.missing <- pkgs[!check]
+  install.packages(pkgs.missing)
+  check <- sapply(pkgs.missing,require,warn.conflicts = TRUE,character.only = TRUE)
+}
 
+
+# set up ------------------------------------------------------------------
 
 Sys.setenv("plotly_username"="fansi-sifan")
 Sys.setenv("plotly_api_key"="rR48wbDvfdnqC3mLPz2X")
 
-library(shiny)
-library(plotly)
-library(dplyr)
-subsidy.summary <- read.csv('summary.csv')
-#xwalk <- read.csv("/Users/Fancy/OneDrive - The Brookings Institution/Classes/code/Xwalk/states.csv")
-xwalk <- read.csv("../R/Xwalk/state2abb.csv")
+
+load('summary.Rda')
+xwalk <- read.csv("/Users/Fancy/OneDrive - The Brookings Institution/Classes/code/Xwalk/states.csv")
+#xwalk <- read.csv("../R/Xwalk/state2abb.csv")
 
 #data$hover <- with(data, paste(State, '<br>', "Foreign Share:", paste(round(100*foreign.share, 2), "%", sep="")))
-data <- left_join(subsidy.summary, xwalk, by = c("State" = "Name"))
-# give state boundaries a white border
+data <- summary %>%
+  filter(foreign ==1 & federal ==0) %>%
+  left_join(xwalk, by = c("state" = "Name")) 
 
+# give state boundaries a white border
 
 l <- list(color = toRGB("black"), width = 2)
 # specify some map projection/options
@@ -26,12 +38,12 @@ g <- list(
 
 p <- plot_geo(data, locationmode = 'USA-states') %>%
   add_trace(
-    z = ~foreign.share, text = ~State, locations = ~State.y,
-    color = ~foreign.share, colors = 'Blues'
+    z = ~industry_sum, text = ~Major.Industry.of.Parent, locations = ~State,
+    color = ~industry_sum, colors = 'Blues'
   ) %>%
-  colorbar(title = "Share") %>%
+  colorbar(title = "Sum") %>%
   layout(
-    title = 'Foreign subsidy share by State<br>(Hover for breakdown)',
+    title = 'Top industry by State<br>(Hover for breakdown)',
     geo = g
   )
 
@@ -39,5 +51,5 @@ p
 
 # Create a shareable link to your chart
 # Set up API credentials: https://plot.ly/r/getting-started
-api_create(p, filename = "subsidy_foreign_share_test", sharing = "public")
+api_create(p, filename = "Top industry by state", sharing = "public")
 
